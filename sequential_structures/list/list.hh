@@ -16,11 +16,11 @@ class List {
 public:
   List(): size_(0), cap_(8), array_(create_and_init_buffer()) {};
 
-  int operator[](int i) const {
+  inline int operator[](int i) const {
     return this->at(i);
   }
   
-  int len() const {
+  inline int len() const {
     return this->size_;
   };
   
