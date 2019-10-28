@@ -8,10 +8,10 @@ jobs:
       - setup_remote_docker
       - run:
           name: Check that apt is installed and update
-          command: apt --version && apt-get update -qy
+          command: apt --version && apt-get update
       - run:
           name: Install curl
-          command: apt-get install curl
+          command: apt-get -qy install curl
       - run:
           name: Install docker client
           command: |
