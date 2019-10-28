@@ -7,6 +7,9 @@ jobs:
       - checkout
       - setup_remote_docker
       - run:
+          name: Check that apt is installed
+          command: apt --version
+      - run:
           name: Install docker client
           command: |
             set -x
