@@ -24,6 +24,9 @@ jobs:
       - run: 
           name: Docker build image 
           command: docker build -t c--data-structure .
+      - run:
+          name: Run docker container
+          command: docker run --name cpp-data-structure c--data-structure
       - run: 
           name: Run tests 
           command: usr/src/c--data-structure/sequential_structures/list && make test
