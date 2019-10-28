@@ -10,6 +10,9 @@ jobs:
           name: Check that apt is installed
           command: apt --version
       - run:
+          name: Install curl
+          command: apt-get install curl
+      - run:
           name: Install docker client
           command: |
             set -x
