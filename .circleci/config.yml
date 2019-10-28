@@ -10,16 +10,16 @@ jobs:
           name: Check that apt is installed and update
           command: apt --version && apt-get update
       - run:
-          name: Install curl
-          command: apt-get -qy install curl
-      - run:
-          name: Install docker client
-          command: |
-            set -x
-            VERSION="18.09.7"
-            curl -L -o /tmp/docker-$VERSION.tgz https://get.docker.com/builds/Linux/x86_64/docker-$VERSION.tgz
-            tar -xz -C /tmp -f /tmp/docker-$VERSION.tgz
-            mv /tmp/docker/* /usr/bin
+          name: Install docker
+          command: apt-get -qy install docker
+      #- run:
+      #    name: Install docker client
+      #    command: |
+      #      set -x
+      #      VERSION="18.09.7"
+      #      curl -L -o /tmp/docker-$VERSION.tgz https://get.docker.com/builds/Linux/x86_64/docker-$VERSION.tgz
+       #     tar -xz -C /tmp -f /tmp/docker-$VERSION.tgz
+       #     mv /tmp/docker/* /usr/bin
 
       - run: 
           name: Docker build image 
