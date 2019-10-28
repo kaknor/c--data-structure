@@ -25,5 +25,5 @@ jobs:
           name: Docker build image 
           command: docker build -t c--data-structure .
       - run: 
-          name: Print the Current Time 
-          command: date
+          name: Make the project 
+          command: make all
