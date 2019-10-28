@@ -6,8 +6,8 @@ jobs:
     steps: 
       - checkout 
       - run: 
-          name: make 
-          command: make all
+          name: Docker build image 
+          command: docker build -t c--data-structure .
       - run: 
           name: Print the Current Time 
           command: date
