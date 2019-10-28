@@ -2,16 +2,16 @@ version: 2
 jobs:
   build:
     docker: 
-      - image: ubuntu 
+      - image: circleci/buildpack-deps 
     steps: 
       - checkout
       - setup_remote_docker
-      - run:
-          name: Check that apt is installed and update
-          command: apt --version && apt-get update
-      - run:
-          name: Install docker
-          command: apt-get -qy install docker
+      #- run:
+      #    name: Check that apt is installed and update
+      #    command: apt --version && apt-get update
+      #- run:
+      #    name: Install docker
+      #    command: apt-get -qy install docker
       #- run:
       #    name: Install docker client
       #    command: |
