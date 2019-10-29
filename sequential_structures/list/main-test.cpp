@@ -6,10 +6,9 @@
 TEST_CASE("List initialization", "[LIST-INIT]") {
   List l{};
 
-  REQUIRE( l.len() == 0 );	
-  REQUIRE( l.at(0) == 0 );
+  REQUIRE( l.len() == 0 );
+  l.pushback(0);
   REQUIRE_THROWS_AS( l.at(12), std::out_of_range );
-  REQUIRE( l[0] == 0 );
   REQUIRE_THROWS_AS( l[12], std::out_of_range );
 }
 
