@@ -6,8 +6,6 @@
 TEST_CASE("List initialization", "[LIST-INIT]") {
   List l{};
 
-  for (std::size_t i = 0; i < CAP_INIT_SIZE; ++i)
-    REQUIRE( l[i] == 0 );
   REQUIRE( l.len() == 0 );	
   REQUIRE( l.at(0) == 0 );
   REQUIRE_THROWS_AS( l.at(12), std::out_of_range );
