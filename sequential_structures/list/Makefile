@@ -4,7 +4,7 @@ EXEC=a.out
 all: 
 	$(CXX) -std=c++17 -g -Wall -Werror *.cpp *.hh
 
-test: all
+test:
 	./$(EXEC) -s
 
 clean:
